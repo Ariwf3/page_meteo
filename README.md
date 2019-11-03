@@ -1,5 +1,5 @@
 # Meteo page
-
+![screenshot meteo page](assets/img/screen_meteo.png)
 A simple meteo page which gives the local or elsewhere weather.
 
 ### Purpose
