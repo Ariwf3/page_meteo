@@ -25,7 +25,8 @@ function displayWeatherInfos(data) {
     document.querySelector("#temperature").textContent = Math.round(temperature);
     document.querySelector("#conditions").textContent = capitalize(description);
     // gestion classes image de fond selon la météo
-    document.querySelector("i.wi").className = weatherIcons[conditions];
+    document.querySelector("i").className = weatherIcons[conditions];
+    // console.log(document.querySelector("i.wi").className)
 
     document.body.className = conditions.toLowerCase()
 
@@ -43,7 +44,7 @@ async function main(withIP = true) {
             .then(json => json.ip);
 
         // 2. Prendre l'a ville grâce à l'adresse ip
-        city = await fetch(`https://api.ipstack.com/${ip}?access_key=614948059492de6ec22ecf301fa30373`)
+        city = await fetch(`http://api.ipstack.com/${ip}?access_key=614948059492de6ec22ecf301fa30373`, { mode: "cors" })
             .then(result => result.json())
             .then(json => json.city);
 
