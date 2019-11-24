@@ -43,6 +43,16 @@ body {
     
 }
 
+#info_pub {
+    font-size: 1.4em;
+    color: cornflowerblue;
+}
+
+.fadeOut {
+    display : none;
+    transition-duration: 3s;
+}
+
 h1 {
     font-size : 3em;
     position: relative;

@@ -9,6 +9,17 @@ const weatherIcons = {
     "Drizzle": "wi wi-day-sleet",
 }
 
+/**
+ * 
+ * @param {string} selector 
+ */
+function fadeOutDelay(selector) {
+    setTimeout(() => {
+        document.querySelector(selector).className = "fadeOut";
+    }, 4500);
+}
+
+
 // Rend capitale première lettre d'une string
 function capitalize(str) {
     return str[0].toUpperCase() + str.slice(1);
@@ -25,7 +36,7 @@ function displayWeatherInfos(data) {
     document.querySelector("#temperature").textContent = Math.round(temperature);
     document.querySelector("#conditions").textContent = capitalize(description);
     // gestion classes image de fond selon la météo
-    document.querySelector("i").className = weatherIcons[conditions];
+    document.querySelector("i#wi").className = weatherIcons[conditions];
     // console.log(document.querySelector("i.wi").className)
 
     document.body.className = conditions.toLowerCase()

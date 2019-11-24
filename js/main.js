@@ -18,4 +18,5 @@ city.addEventListener('keydown', (e) => {
 })
 
 //lancement script
+fadeOutDelay("#info_pub");
 main();
