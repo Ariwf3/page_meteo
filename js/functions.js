@@ -55,7 +55,7 @@ async function main(withIP = true) {
             .then(json => json.ip);
 
         // 2. Prendre l'a ville grâce à l'adresse ip
-        city = await fetch(`http://api.ipstack.com/${ip}?access_key=614948059492de6ec22ecf301fa30373`, { mode: "cors" })
+        city = await fetch(`http://api.ipstack.com/${ip}?access_key=614948059492de6ec22ecf301fa30373`, { mode: "no-cors" })
             .then(result => result.json())
             .then(json => json.city);
 
